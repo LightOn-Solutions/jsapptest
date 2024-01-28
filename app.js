@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 let webhookData = [];
 
 // Route to receive webhook data
-app.post('/', (req, res) => {
+app.post('/webhook', (req, res) => {
     webhookData.push(req.body);
     res.status(200).end();
 });
